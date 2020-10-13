@@ -1,0 +1,88 @@
+"Lab Section (W, TE, or TL)",Initials,"Orb # (1, 2, 3 or 4)",spider mass (g),spider total body length (mm),spider sex,mature Y or N,Frame or spiral touched first or second (score as 1 or 2),Vibration on Frame or Spiral (F or S),Change in Posture? Y or N,"Move but stay in hub (""hub jig"") Y or N",Move toward vibration? Y or N,Move away from vibration Y or N,Drop off web? Y or N,to retreat? Y or N,time to reaching closest point to tuning fork (sec),inteaction with tuning fork? (silk? touch? bite?) Y or N,notes on vibration,hub to where tuning fork touched spiral (cm),Orb height (cm),orb width (cm),# radial threads,# spirals bottom,# spirals top,web damaged? (Y or N),Prey in web? (Y or N),Prey in mouth? (Y or N),What web connected to?,clock position touched?
+TE,"BA, MP, HA",2,0.225,14,female,y,1,F,Y,N,Y,N,Y,N,5,Y touch,strong,19,40,37,32,18,14,Y,N,N,bush/tree,4:30:00
+TE,"BA, MP, HA",3,,,,,1,F,Y,Y,Y,N,Y,Y,23,Y silk,strong,31,35,32,30,35,35,N,Y,N,bush/tree,4:30:00
+TE,"BA, MP, HA",4,0.1695,14,female,y,1,F,Y,N,Y,N,N,N,4,Y touch,strong,23,38,32,24,24,23,N,N,N,bush/tree,5:00:00
+TE,"BA, MP, HA",5,,,,,1,F,Y,N,N,N,N,N,,N,strong,21,50,46,27,32,26,N,N,N,bush/tree,4:30:00
+W,"S.K.F.D., A.M.",1,,,Female,Y,1,F,Y,N,Y,N,N,N,10.11,Y (touch),30 sec,32.1,48.9,43.5,30,21,29,N,N,N,Bush/Bush,6:30:00
+TL,"K.H., C.D., T.F.",1,0.4276,14,female,Y,1,F,Y,N,N,N,N,N,N/A,N,30 sec,19,27,35,25,25,26,N,N,N,rose bush,4:00:00
+TL,"K.H., C.D., T.F.",3,0.2103,12,female,Y,1,F,Y,Y,Y,N,N,N,15,Y (touch),30 sec,18,30,32,30,23,24,N,N,N,bush/bush,9:00:00
+TL,"TM, WB, KP",1,0.1345,12,female,Y,1,F,Y,Y,Y,N,N,N,6.25,Y,35 sec,,,40,,,,Y,N,N,concrete/lamp,
+TL,"TM, WB, KP",3,0.1339,12,female,Y,1,F,Y,Y,N,N,N,N,9,N,30 sec,15,25,24,21,19,16,N,N,,rose bush,
+W,"PR, DG, KG",1,,,female,N,1,F,Y,Y,N,N,N,N,N/A,N,18 sec,,40,40,30,30,30,N,Y,Y,side of building,
+TE,"AM, AK, MM",1,0.139,12,female,Y,1,F,Y,Y,N,Y,N,N,N/A,N,20 sec,10,25,21,23,23,26,Y,Y,N,bushes,3:00:00
+TE,"AM, AK, MM",3,0.158,10,female,Y,1,F,Y,Y,Y,N,N,N,11,Y,25 sec,11,32,27,40,47,29,Y,N,N,shrubs,10:00:00
+TL,"GS, MC-S, NC",2,0.1437,10,female,n,1,F,Y,Y,Y,Y,N,N,6,Y,15 sec,20,4,26,24,5,6,Y,N,N,trees,3:30:00
+TE,"MS, KW, SW",1,0.2263,12,female,Y,1,F,Y,Y,Y,N,N,N,16.26,N,30,16.5,31,30,,25,24,Some during capture,N,N,trees/ferns,5:00:00
+TE,"MS, KW, SW",3,0.1988,10,female,Y,1,F,Y,Y,Y,N,N,N,n/a,N,30,12.5,40,25,,37,33,N,N,N,fern/tree,5:00:00
+TL,"KL, KM, SJ",2,0.0684,7,female,n,1,F,Y,Y,Y,N,N,N,N/A,N/A,17,12,32,23,22,22,22,N,Y,N,tree,
+TL,"KL, KM, SJ",4,0.2516,14,female,Y,1,F,Y,Y,Y,N,N,N,11,touch,30,22,27,23,19,20,19,Y,N,N,fence/bush,8:00:00
+TL,"AW, JW, LP",2,0.3078,14,female,,1,F,Y,N,N,N,N,N,N/A,N/A,10,25,39,27,34,38,38,N,N,N,trees and ivy,4
+TL,"DL, FB, AB",1,0.1101,13,female,Y,1,F,Y,N,N,N,N,N,N/A,N/A,30 sec,25,37,24,28,42,38,N,N,N,bushes,10:00:00
+TE,"TL, YC, BB",1,0.1118,10,female,Y,1,F,Y,Y,Y,N,N,N,15,Y,30,3,28,31,22,17,23,Y,N,N,bushes,8:00:00
+TE,"TL, YC, BB",2,0.1103,9,female,Y,1,F,Y,Y,Y,N,N,N,15,Y,30,17.5,28,10,12,12,12,Y,N,N,bridge(bushes/pole),
+TE,"TL, YC, BB",3,0.1598,11,Female,Y,1,F,Y,N,Y,N,N,N,17,Y,18,22,50,50,27,26,30,N,N,N,Bushes,4:30:00
+TE,"LF, AC, AP",1,0.2061,11,female,Y,1,F,Y,Y,Y,N,Y,N,9.97,Y silk,30,15,35,31,29,27,28,N,N,N,bush/tree,
+TE,"LF, AC, AP",3,0.1102,10,female,Y,1,F,Y,Y,Y,Y,N,N,9.56,Y touch,30,14,29,31,,,24,Y,N,N,tree,
+TE,"RA, TC, CBB",1,0.1162,11,female,Y,1,F,Y,N,Y,N,N,N,4.35,"Y bite, silk",25,11,26,32,18,25,30,Y,Y,N,sign,7:00:00
+,"RA, SS",1,0.1299,12,female,Y,1,F,Y,N,Y,Y,N,Y,10.21,"Y, touch",23,8.2,28.6,24.1,27,20,32,Y,Y,Y,flowers,7:00:00
+,"RA, SS",1,0.1299,12,female,Y,1,F,Y,N,N,Y,N,Y,N/A,N,24,8.2,28.6,24.1,27,20,32,Y,Y,Y,flowers,7:00:00
+TL,"AG, AW, SA",1,0.0815,11,female,Y,1,F,Y,Y,Y,N,N,N,10.43,"Y, touch, silk",30,11.3,29.4,32.6,25,21,24,Y,N,N,leaves/flowers,5:00:00
+TE,"BA, MP, HA",1,0.1192,12,female,y,2,F,Y,Y,N,N,N,N,,N,10,28,42,38,21,33,36,N,Y,Y,bush/tree,4:30:00
+W,"S.K.F.D., A.M.",2,,,Female,Y,2,F,Y,N,Y,N,N,N,9.22,N,30,29.9,43.7,33.1,22,40,33,N,N,N,Bush/Bush,8:00:00
+TL,"K.H., C.D., T.F.",2,0.2265,12,female,Y,2,F,Y,N,N,N,N,N,N/A,N,30,20,36,31,21,22,23,N,Y,Y,bush/tree,10:00:00
+TL,"TM, WB, KP",4,0.2,14,female,Y,2,F,Y,Y,N,N,N,N,,N,30,20,40,25,28,33,33,Y,N,,vine,
+TL,"TM, WB, KP",2,0.0671,11,female,Y,2,F,Y,Y,N,N,N,N,8,N,30,14,34,26,24,26,24,Y,N,,medal/shrubs,
+TL,"GS, MC-S, NC",1,0.1728,10,female,Y,2,F,Y,Y,N,N,N,N,N/A,N,21,13,26,21,26,31,32,N/A,N,N,tree/bush,5:00:00
+TE,"MS, KW, SW",2,0.1182,9,female,Y,2,F,Y,N,N,N,N,N,6,N,30,20,28,35,,31,28,N,N,N,bushes,7:00:00
+-,-,-,-,-,-,-,2,F,Y,N (small jig),Y,N,N,N,11,silk,26,,,,,,,,,N,-,
+-,-,-,-,-,-,-,2,F,Y,N,N,N,N,N,N/A,N/A,30,,,,,,,,,N,-,
+TL,"AW, JW, LP",1,0.3889,17,female,Y,2,F,Y,N,N,N,N,N,N/A,N/A,,24,30,,19,20,20,Y,Y,N,blackberry,5
+TL,"DL, FB, AB",2,0.1069,10,female,Y,2,F,Y,N,N,Y,N,Y,N/A,N/A,30,14,31,35,31,40,26,N,N,N,bushes,5:00:00
+TL,"SA, AG, AW",1,0.159,1.1,female,Y,2,F,Y,Y,N,Y,N,Y,2,N/A,2,19.8,26.2,33.9,22,33,32,N,N,N,leaves/bushes,3:30:00
+TL,"SA, AG, AW",2,0.208,1.4,female,Y,2,F,Y,N,N,Y,N,Y,N/A,N/A,2,30.2,43.3,30.5,27,39,37,N,N,N,stone,6:30:00
+TE,"LF, AC, AP",2,0.1205,11,female,Y,2,F,Y,N,Y,N,N,N,3.12,N,30,18,34,35,25,17,14,N,N,N,tree,
+TE,"LF, AC, AP",4,0.095,8,female,Y,2,F,Y,Y,Y,N,N,N,12.07,Y touch,30,13,22,16,,,16,Y,N,N,tree,
+TE,"RA, TC, CBB",2,0.0642,9,female,?,2,F,Y,N,Y,N,N,Y,11.75,"Y, touch",20,,,,,,,N,Y,N,bushes,5:00:00
+TL,"AG, AW, SA",2,0.2125,15,female,Y,2,F,Y,N,Y,N,N,N,2.8,"Y, touch, silk",25,25,47.2,29.3,28,32,33,Y,N,N,leaves,5:00:00
+TE,"BA, MP, HA",1,0.1192,12,female,y,1,S,N,N,N,N,N,N,,N,10,16,42,38,21,33,36,N,Y,Y,bush/tree,5:00:00
+TL,"TM, WB, KP",3,0.1339,12,female,Y,1,S,N,N,N,N,N,N,,N,30,15,25,24,21,19,16,N,N,,rose bush,
+TL,"GS, MC-S, NC",2,0.1437,10,female,Y,1,S,N,N,N,N,N,N,N/A,N,25,20,40,26,24,5,6,Y,N,N,trees,4:00:00
+TL,"DL, FB, AB",1,0.1101,13,female,Y,1,S,N,N,N,N,N,N,N/A,N/A,30,15,37,24,28,42,38,N,N,N,bushes,4:00:00
+W,"S.K.F.D., A.M.",2,,,Female,y,1,S,Y,N,Y,N,N,N,3.15,N,30,21.8,43.7,33.1,22,40,33,N,N,N,Bush/Bush,6:30:00
+TL,"K.H., C.D., T.F.",2,0.2265,12,female,Y,1,S,Y,Y,Y,N,N,N,15,N,30,25,36,31,21,21,23,N,N,Y,bush/tree,10:00:00
+TL,"TM, WB, KP",1,0.1345,12,female,Y,1,S,Y,N,Y,N,N,N,5,Y,,,,40,20,,,Y,N,N,concrete/lamp,
+W,"PR, DG, KG",2,,,female,Y,1,S,Y,N,N,Y,N,Y,N/A,N,25,27,52,40,32,25,20,Y,Y,N,bushes,7:00:00
+TE,"MS, KW, SW",2,0.1182,9,female,Y,1,S,Y,Y,Y,N,N,N,12,N,30,17,28,35,,31,28,N,N,N,bushes,7:00:00
+TL,"KL, KM, SJ",1,0.1566,11,female,Y,1,S,Y,N (small jig),Y,N,N,N,,silk,27,23,41,35,30,,43,Y (not serious),N,N,concrete,
+TL,"KL, KM, SJ",3,0.143,12,female,Y,1,S,Y,N,N,N,N,N,N/A,N/A,30,20,27,21,23,18,17,Y (not serious),N,N,sitcks/bush,
+TL,"AW, JW, LP",1,0.3889,17,female,Y,1,S,Y,N,Y,N,N,N,2,touch,20,16.5,30,,19,20,20,Y,Y,N,blackberry,4
+TL,"SA, AG, AW",1,0.159,11,female,Y,1,S,Y,N,Y,N,N,Y,2.23,silk,30,6.2,26.2,33.9,22,33,32,N,N,N,leaves/bushes,3:30:00
+TL,"SA, AG, AW",2,0.208,14,female,Y,1,S,Y,Y,Y,N,N,N,29.3,silk,45,25.3,43.3,30.5,27,39,37,N,N,N,pillars,6:30:00
+TE,"LF, AC, AP",1,0.2061,11,female,Y,1,S,Y,Y,Y,Y,N,N,2.41,Y silk,30,15,35,31,29,27,28,N,N,N,bush/tree,
+TE,"LF, AC, AP",3,0.1102,10,female,Y,1,S,Y,Y,Y,Y,N,N,14.75,Y silk,30,14,29,31,,,24,Y,N,N,tree,
+TE,"RA, TC, CBB",1,0.1132,11,female,Y,1,S,Y,N,Y,Y,N,N,11.065,Y touch,15,11,26,32,18,25,30,Y,Y,N,sign,7:30:00
+TL,"AG, AW, SA",1,0.0815,11,female,Y,1,S,Y,N,Y,N,N,N,12.34,"Y, touch, silk",30,11.3,29.4,32.6,25,21,24,Y,N,N,leaves/flowers,5:00:00
+TL,"TM, WB, KP",2,0.0671,11,female,Y,2,S,N,N,N,N,N,N,,N,30 sec,14,34,26,24,26,24,Y,Y,,medal/shrubs,
+TL,"TM, WB, KP",4,0.2,14,female,Y,2,S,N,N,N,N,N,N,,N,30 sec,20,40,25,,33,33,Y,N,,vine,
+TL,"GS, MC-S, NC",1,0.1728,10,female,Y,2,S,N,N,N,N,N,N,N/A,N,21 sec,13,26,21,26,31,32,N/A,Y,N,tree/bush,5:00:00
+TE,"AM, AK, MM",4,0.205,11,female,Y,2,S,N,N,N,N,N,N,N/A,N,15 sec,17,28,24,33,30,35,Y,Y,Y,trees,11:00:00
+TE,"MS, KW, SW",1,0.2263,12,female,Y,2,S,N,N,N,N,N,N,n/a,N,30,14.5,31,30,,25,24,,N,N,trees/ferns,5:00:00
+TE,"MS, KW, SW",3,0.1988,10,female,Y,2,S,N,N,N,N,N,N,n/a,N,30,19,40,25,,37,33,N,N,N,fern/tree,5:00:00
+TE,"LF, AC, AP",2,0.1205,11,female,Y,2,S,N,N,N,N,N,N,n/a,N,30,18,34,35,25,17,14,N,N,N,tree,
+TE,"BA, MP, HA",2,0.225,14,female,y,2,S,Y,N,Y,N,N,Y,10,Y silk,strong,17,40,37,32,18,14,Y,N,N,bush/tree,4:30:00
+TE,"BA, MP, HA",3,,,,,2,S,Y,Y,N,N,N,N,,N,strong,29,35,32,30,35,35,N,Y,N,bush/tree,4:30:00
+TE,"BA, MP, HA",4,0.1695,14,female,y,2,S,Y,Y,N,N,N,N,3,N,short,17,38,32,24,24,23,N,N,N,bush/tree,5:00:00
+TE,"BA, MP, HA",5,,,,,2,S,Y,N,Y,N,N,N,10,Y touch,medium,19,50,46,27,32,26,N,N,N,bush/tree,4:30:00
+W,"S.K.F.D., A.M.",1,,,Female,Y,2,S,Y,N,Y,N,N,N,6.19,N,30,28.8,48.9,43.5,30,21,29,N,N,N,Bush/Bush,8:00:00
+TL,"K.H., C.D., T.F.",1,0.4276,14,female,Y,2,S,Y,N,N,N,N,N,N/A,N,30 sec,15,27,35,25,25,26,N,N,N,rose bush,4:00:00
+TL,"K.H., C.D., T.F.",3,0.2103,12,female,Y,2,S,Y,Y,N,N,N,N,16,Y (touch),30 sec,15,30,32,30,32,23,N,N,N,bush/bush,9:00:00
+-,-,-,-,-,-,-,2,S,Y,Y,N,N,N,N,N/A,N/A,35,,,,,,,,,Y,-,
+-,-,-,-,-,-,-,2,S,Y,Y,Y,N,N,N,12,silk,30,,,,,,,,,N,-,-
+TL,"AW, JW, LP",2,0.3078,14,female,,2,S,Y,N,N,Y,N,Y,N/A,N/A,13,16,39,27,34,38,38,N,N,N,trees and ivy,4
+TL,"DL, FB, AB",2,0.1069,10,female,Y,2,S,Y,Y,Y,N,Y,N,N/A,N/A,30 sec,13,31,35,31,40,26,N,N,N,bushes,2:00:00
+TE,"TL, YC, BB",1,0.1118,10,female,Y,2,S,Y,Y,Y,Y,N,N,16,Y attacked,30,4,28,32,22,17,12,Y,N,N,bushes,8:00:00
+TE,"TL, YC, BB",2,0.1103,9,female,Y,2,S,Y,Y,Y,N,N,N,4,Y,30,12.5,28,10,12,12,12,Y,N,N,bridge(bushes/pole),
+TE,"TL, YC, BB",3,0.1598,11,Female,Y,2,S,Y,N,N,N,N,N,6,Y,20,22,50,50,27,26,30,N,N,N,Bushes,5:00:00
+TE,"LF, AC, AP",4,0.095,8,female,Y,2,S,Y,Y,Y,N,N,N,8.17,N,30,13,22,16,,,16,Y,N,N,tree,
+TE,"RA, TC, CBB",2,0.0642,9,female,?,2,S,Y,N,Y,N,N,N,11.1,Y touch,20,,,,,,,N,Y,N,bushes,5:00:00
+TL,"AG, AW, SA",2,0.2125,15,female,Y,2,S,Y,N,Y,N,N,N,3.5,"Y, touch, silk",20,25,47.2,29.3,28,32,33,Y,N,N,leaves,5:00:00

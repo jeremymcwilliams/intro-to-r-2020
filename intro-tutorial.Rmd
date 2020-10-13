@@ -1,0 +1,423 @@
+---
+title: "Intro to R, fall 2020"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+# Intro to R workshop
+
+### Watzek Library Digital Initiatives
+### October 16th, 2020
+
+###### Much of the content has been borrowed from Harvard University, so thank you Harvard!
+###### https://tutorials.iq.harvard.edu/R/Rintro/Rintro.html
+
+### Goals of this workshop:
+
+* Gain some familiarity with RStudio Server
+* Write some basic R code
+* Work with a data set
+* Create some basic plots
+
+Before diving in, you might be wondering what's up with the weird syntax of this document. It's "R Markdown", which is a shorthand for creating formatted text in documents. One of the neat things about R Notebooks (like this document) is that you can "knit" it to an output like PDF or HTML. To get a sneak peek, click on the down arrow next to the "Knit" menu above, and select "Knit to PDF" (you may have to disable your browser's popup blocker). The resulting document is a mix of formatted text, code samples, and outputs from those code samples. This feature is pretty spiffy for creating tutorials, reports, etc. in which R code and output is used.
+
+
+### Basic R code
+
+R code can be run in the console, or as a "code chunk" within this R notebook. Below is a code chunk. You can run the code chunk by clicking the green "play" button.
+
+```{r}
+2+2
+```
+
+Throughout this workshop, there will be a mix of code chunks pre-populated with code, and empty code chunks. The empty code chunks give you an opportunity to write code, run it, and see the output. Each of the empty chunks are preceded with "YOUR TURN:".
+
+#### Assigning variables
+
+Creating variables in R isn't so bad. Most scripting languages use the "=" sign, but R uses "<-". So below, I'm creating a variable x, and setting it equal to 10. Afterward, I entered "x", which should output the value of x:
+
+```{r}
+x<-10
+
+x
+```
+
+
+YOUR TURN:
+Now try creating a variable "y", set it equal to 7+9, and then print it out:
+```{r}
+
+
+```
+
+
+
+#### Functions
+
+Like most languages, R has functions that help you quickly execute common tasks. Functions typically take the form of:
+
+functionName(argument1, argument2, etc....)
+
+For example, the function sqrt(number) takes the square root of a number:
+
+```{r}
+sqrt(9)
+```
+
+
+YOUR TURN:
+In the chunk below, create a variable 'z', set it equal to the square root of 90, and print it out:
+```{r}
+
+
+```
+
+One nice thing about RStudio Server is that you can readily access documentation for functions by using the "help" command:
+
+```{r}
+help(sqrt)
+```
+
+The documentation appears in the lower right window in the "help" tab.
+
+
+#### Statistical Functions
+
+Let's start with the "c" function. "c" stands for "combine", and is used to create a one-dimensional array of values (also known as a "vector"):
+
+```{r}
+# I polled my cowoerks at Watzek Library to see how many pets were in each household:
+watzekPets<-c(1, 1, 2, 3, 2, 0, 1, 1, 1, 0, 0)
+
+#print it out
+watzekPets
+
+#By the way, anything preceded by a "#" is a "comment". It does not get executed as code.
+#Comments can be super helpful to provide info on your code.
+
+```
+
+
+Now let's say we want to know the average number of pets owned by Watzek staff. For this, we can use the mean function:
+
+```{r}
+
+avgPets<-mean(watzekPets)
+
+avgPets
+
+```
+We can also determine the standard deviation of our data. Standard Deviation is a measure of how spread apart the measurements are. 
+
+```{r}
+sdPets<-sd(watzekPets)
+
+#print it out
+sdPets
+```
+
+For comparison's sake, run the code sample below on a dataset of measurements that vary much more widely:
+
+```{r}
+
+#pretend dataset of current coins in your pocket of Watzek staff:
+
+watzekCoins<-c(2, 50, 100, 20, 78, 0, 11, 350, 25)
+
+#print standard deviation of watzekCoins
+sd(watzekCoins)
+
+
+
+```
+
+Practice:
+In the code chunk below, 
+
+
+
+
+
+
+### Working with a Data Set
+
+#### Packages and Libraries
+
+Before working with data, let's quickly talk about packages and libraries in R. While some functions are built in with R (e.g. sqrt), others require users to install packages. A **package** is just a collection of functions, while a **library** is the location of where that package lives.    
+
+In order to load a csv file of data, we want to use the function read_csv, though this is not part of R's core functions. If we try running the function, it will fail.  
+
+The **read_csv** function is part of the library "readr". So first I would need to install the package using this command (we've already installed it on this server, so we won't actually run the command):
+
+install.packages("readr")
+
+Now to use the functions in readr, including read_csv, we need to load the readr library. Run the following code:
+```{r}
+library(readr)
+```
+
+
+Let's now load a csv file. Attaching in your workspace is a file named "babyNames.csv". This file contains a cleaned up version of annual US baby name data from the US Government (https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data). 
+Enter this command in the code block below:
+baby.names<-read_csv("babyNames.csv");
+
+```{r}
+orbData<-read_csv("100_13_orbdata.csv")
+```
+
+The variable "baby.names" now contains the full csv file in "tibble" format. A "tibble" is a type of dataset format used frequently in R, particularly with filtering, manipulating, and plotting data. In the code chunk below, enter and run "baby.names" to see the basic structure of the tibble:
+
+YOUR TURN:
+```{r}
+orbData
+```
+
+### Filtering and sorting data
+
+Often with datasets you might just be interested in particular subsets of data. In the case of baby.names, say were just interested in looking at a couple names. To do so, we'll use the "filter" function, which is part of the "dplyr" package. The "dpylr" package is already installed on the system, but we'll still need to make the library available:
+
+```{r}
+library(dplyr)
+```
+
+The filter function takes a couple arguements: the data itself, and also the rules you want to filter. For example, say I only am interested in the data for which the Name is Mary. In the chunk below, I'm going to make it so:
+
+```{r}
+
+
+wts<-orbData$`spider mass (g)`
+#wts
+
+betterWts<-as.numeric(wts)
+betterWts
+
+evenBetterWts<-na.omit(betterWts)
+evenBetterWts
+
+sd(evenBetterWts)
+
+#cleanedWts<-na.omit(wts)
+#as.numeric(cleanedWts)
+
+#sd(cleanedWts)
+
+#mary<-filter(baby.names, Name=="Mary")
+
+#mary
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+
+# Simple Pie Chart
+slices <- c(10, 12,4, 16, 8)
+lbls <- c("US", "UK", "Australia", "Germany", "France")
+pie(slices, labels = lbls, main="Pie Chart of Countries")
+
+```
+
+
+
+
+Looking at the data, now I'm kind of interested in just the Marys who are boys (who knew?):
+
+```{r}
+boyMarys<-filter(baby.names, (Name=="Mary" & Sex=="Boys"))
+boyMarys
+```
+
+Now, I wonder which year was most popular for naming boys Mary? For this, I'll use the arrange function to sort the data:
+
+```{r}
+arrange(boyMarys, Count)
+## "Count" refers to the Count field in the tibble
+
+```
+
+
+The default sort method for "arrange" as ascending, but we can run it again to sort descending:
+
+```{r}
+arrange(boyMarys, desc(Count))
+
+```
+
+
+Now it's your turn. Given baby.names, what year was your name most popular? Was there a most popular year for your baby name of a different Sex?
+
+
+YOUR TURN:
+```{r}
+
+
+
+
+
+```
+
+
+### Plotting Baby Name Trends
+
+Time to use this data to make some charts. We're going to use the powerful "ggplot" library:
+
+```{r}
+library(ggplot2)
+```
+
+For quick and simple plots we can use the qplot function. "qplot" can accept many arguements (see here for documentation: https://ggplot2.tidyverse.org/reference/qplot.html), but for a scatterplot can minimally accept x, y, and the dataset.
+
+For example, we can plot the number of babies given the name “Diana” over time like this:
+
+```{r}
+diana <- filter(baby.names, Name == "Diana")
+
+qplot(x = Year, y = Count, data = diana)
+
+```
+
+
+As with some of the other names, there are a mix of both boys and girls named Diana. We can help differentiate between the two by adding the "color" argument:
+
+```{r}
+qplot(x = Year, y = Count, color = Sex, data = diana)
+
+```
+
+
+Now it's your turn to apply these techniques:
+
+
+YOUR TURN:
+In the chunk below, use "filter" to extract data for your name:
+```{r}
+
+```
+
+YOUR TURN:
+Plot the data you produced in the step above, with Year on the x-axis and Count on the y-axis, and use color to differentiate boys vs. girls:
+```{r}
+
+
+```
+
+
+YOUR TURN:
+Generate the same plot as above, but use lines instead of points (may require some googling):
+```{r}
+
+```
+
+
+### Plotting the most popular names
+
+Just like with Excel, sometimes you may want to add a column of data that is dependent upon calculations of other columns. We can do that in R with the "mutate" function, which is part of the dplyr library. The mutate function takes the dataset as the first argument, and next takes the condition for the new column. For example, let's add a column to baby.names that inidcates the total count divided by 1000:
+
+```{r}
+baby.names <- mutate(baby.names, by1k = Count/1000)
+baby.names
+```
+
+#### Operating by group
+
+Because of the nested nature of out data, we want to compute rank or proportion within each Sex X Year group. The dplyr package makes this relatively easy. 
+
+```{r}
+baby.names <- mutate(group_by(baby.names, Year, Sex),
+                     Rank = rank(Count))
+baby.names
+```
+
+We first use "group_by" to isolate the categories to sort, and then the "rank" function essentially sort the grouped data by the "Count" field. And the use of the "mutate" function adds a new column "Rank" to baby.names.
+
+One thing that isn't great is that the "Rank" is kind of in the wrong order. Ideally we want the highest rank to by #1. We can accomplish that by doing the following:
+
+```{r}
+baby.names <- mutate(group_by(baby.names, Year, Sex),
+                     Rank = rank(-Count))
+baby.names
+
+```
+
+
+
+Let's now reset the dataset in preperation for the last exercise:
+```{r}
+rm(baby.names)
+baby.names<-read_csv("babyNames.csv")
+```
+
+
+In this exercise your goal is to identify the most popular names for each year.
+
+YOUR TURN:
+Use mutate and group_by to create a column named “Proportion” where Proportion = Count/sum(Count) for each Year X Sex group.
+```{r}
+
+
+```
+
+
+
+YOUR TURN:
+Use mutate and group_by to create a column named “Rank” where Rank = rank(-Count) for each Year X Sex group.
+```{r}
+
+```
+
+
+YOUR TURN:
+Filter the baby names data to display only the most popular name for each Year X Sex group.
+```{r}
+
+```
+
+YOUR TURN:
+Plot the data produced in step 4, putting Year on the x-axis and Proportion on the y-axis. How has the proportion of babies given the most popular name changed over time?
+```{r}
+
+
+
+```
+
+Parting Thoughts:
+
+* Learning any language takes persistence and effort. 
+* Pick a project or dataset relevant to your work, and try using it in R.
+* Need some local help? Reach out to us - digitalinitiatives@lclark.edu 
+
+
+Online tutorials:
+
+* http://www.codeschool.com/courses/try-r
+* http://www.datacamp.org
+* http://swirlstats.com/
+* http://r4ds.had.co.nz/  
+
+Getting help:
+
+* Documentation and tutorials: http://cran.r-project.org/other-docs.html
+* Recommended R packages by topic: http://cran.r-project.org/web/views/
+* Mailing list: https://stat.ethz.ch/mailman/listinfo/r-help
+* StackOverflow: http://stackoverflow.com/questions/tagged/r
+* Just google your question (e.g. "How do I do 'x' in R?")
+
+
+
