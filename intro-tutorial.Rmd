@@ -93,7 +93,7 @@ The documentation appears in the lower right window in the "help" tab.
 
 #### Statistical Functions
 
-Let's start with the "c" function. "c" stands for "combine", and is used to create a one-dimensional array of values (also known as a "vector"):
+Let's start with the "c" function. "c" stands for "combine", and is used to create a one-dimensional array of values (also known as a "vector"). You could also think of this as a column of data from a spreadsheet.
 
 ```{r}
 # I polled my coworkers at Watzek Library to see how many pets were in each household:
@@ -116,6 +116,11 @@ avgPets<-mean(watzekPets)
 avgPets
 
 ```
+
+
+
+
+
 We can also determine the standard deviation of our data. Standard Deviation is a measure of how spread apart the measurements are. 
 
 ```{r}
@@ -143,7 +148,13 @@ sd(watzekCoins)
 
 ```
 
-PRACTICE:
+
+
+
+
+
+
+YOUR TURN:
 In the code chunk below, create an array called myArray, and set it equal to 3, 7, 8.5, 20, 4, 1, and 15. Print out the mean and standard deviation.
 
 ```{r}
@@ -225,11 +236,16 @@ avgHeight
 
 ```{r}
 
-cleanedHeights<-na.omit(heights, na.action="omit")
+cleanedHeights<-na.omit(heights)
 
 cleanedHeights
 
 ```
+
+
+
+Now that the data is cleaned up, we can get the average:
+
 ```{r}
 
 avgHeights<-mean(cleanedHeights)
@@ -244,119 +260,36 @@ Now it's your turn. Can you find the mean and standard deviation of the "orb wid
 
 ```{r}
 
-# 
+# Create a variable that targets a column
 
 
+
+# Strip out NA values if necessary
+
+
+
+
+# Determine/print mean & standard deviation
 
 
 
 
 ```
 
-
-In the data set, one of the columns indicates whether the web is damaged. Let's say we're interested in seeing if there's a difference in the average weights of spiders for damaged vs. undamaged webs. We can do this in R by using the "filter" function. This lets us create subsets of our tibble, after which we can use the strategies we just learned for determining averages.
-
-```{r}
-
-#The filter function takes two arguments: the first is the data set (or tibble), the second is your filtering condition.
-#For damaged, we only want the rows in which the column value is "Y". We use the "==" because we're comparing two things. 
-
-damaged<-filter(orbData13, orbData13$`web damaged? (Y or N)`=="Y")
-
-#print damaged
-damaged
-
-undamaged<-filter(orbData13, orbData13$`web damaged? (Y or N)`=="N")
-
-undamaged
-
-
-```
-
-
-Now that we have our subsets, we can create arrays for each, and then determine the averages. Since it's likely we'll need to clean up our data as before, to delete the NA values, we can use the na.omit function directly when targeting our data column. Fancy!
-
-```{r}
-
-damagedMass<-na.omit(damaged$`spider mass (g)`)
-
-undamagedMass<-na.omit(undamaged$`spider mass (g)`)
-
-
-
-damagedMass
-
-undamagedMass
-
-```
-
-
-Now we can find the averages...except there's one issue. Notice that all the values listed for damagedMass and undamagedMass are shown in quotation marks. This means that R thinks these values are strings instead of numbers. This is a super important aspect of dealing with data - Data Type. If you want to perform calclulations on data, the data has to be understood to R as numeric (even if it's obvious to us, just by looking at it). 
-
-```{r}
-
-#Here we can redefine damagedMass and undamagedMass, using the as.numeric function. This converts strings to numbers.
-damagedMass<-as.numeric(damagedMass)
-
-undamagedMass<-as.numeric(undamagedMass)
-
-
-#Use the mean function on both
-avgDamagedMass<-mean(damagedMass)
-
-avgUndamagedMass<-mean(undamagedMass)
-
-#print them out
-avgDamagedMass
-
-avgUndamagedMass
-
-```
-
-
-Now it's your turn. Let's say you're interested in comparing the average masses of spiders that have an orb height of 35cm or greater, vs those with an orb hieght of less than 35cm. Write some code in the code chunk below to make your determination.
-
-```{r}
-
-#Use the filter function to create your data subsets
-
-
-
-#Create variables for the mass column from each subset. Do you need to clean your data?
-
-
-
-#Determine the averages
-
-
-```
 
 
 
 
 For the weekend:
 
-Load the class dataset into the Files area (click "Upload", and select the csv file from your computer). Think of a research question or comparison that you're interested in. Use the code chunks below to perform your work:
-
-```{r}
-
-
+Download the csv version of the class data here: http://watzek.lclark.edu/orb20.csv
+Load the file into the Files area (click "Upload", and select the csv file from your computer). 
+Use the techniques learned above to determine the mean of a column of data.
 
 
-
-
-
-
-
-
-
-```
-
-
-
-
-
-
+Need help?
+Email Jeremy at jeremym@lclark.edu
+Jeremy is also hosting R office hours from 3-4pm on Thursdays: https://zoom.us/j/6475828456
 
 
 
