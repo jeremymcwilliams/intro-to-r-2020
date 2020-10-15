@@ -18,7 +18,7 @@ output:
 * Gain some familiarity with RStudio Server
 * Write some basic R code
 * Work with a data set
-* Create some basic plots
+
 
 Before diving in, you might be wondering what's up with the weird syntax of this document. It's "R Markdown", which is a shorthand for creating formatted text in documents. One of the neat things about R Notebooks (like this document) is that you can "knit" it to an output like PDF or HTML. To get a sneak peek, click on the down arrow next to the "Knit" menu above, and select "Knit to PDF" (you may have to disable your browser's popup blocker). The resulting document is a mix of formatted text, code samples, and outputs from those code samples. This feature is pretty spiffy for creating tutorials, reports, etc. in which R code and output is used.
 
@@ -38,9 +38,18 @@ Throughout this workshop, there will be a mix of code chunks pre-populated with 
 Creating variables in R isn't so bad. Most scripting languages use the "=" sign, but R uses "<-". So below, I'm creating a variable x, and setting it equal to 10. Afterward, I entered "x", which should output the value of x:
 
 ```{r}
+# assigns 10 to x
 x<-10
 
+# prints x
 x
+
+
+
+#Anything preceded by a "#" is a "comment". It does not get executed as code.
+#Comments can be super helpful to provide info on your code.
+
+
 ```
 
 
@@ -93,8 +102,7 @@ watzekPets<-c(1, 1, 2, 3, 2, 0, 1, 1, 1, 0, 0)
 #print it out
 watzekPets
 
-#By the way, anything preceded by a "#" is a "comment". It does not get executed as code.
-#Comments can be super helpful to provide info on your code.
+
 
 ```
 
@@ -123,7 +131,10 @@ For comparison's sake, run the code sample below on a dataset of measurements th
 
 #pretend dataset of current coins in your pocket of Watzek staff:
 
-watzekCoins<-c(2, 50, 100, 20, 78, 0, 11, 350, 25)
+watzekCoins<-c(2, 10, 15, 5, 2, 0, 11, 600, 25)
+
+#print average number of coins
+mean(watzekCoins)
 
 #print standard deviation of watzekCoins
 sd(watzekCoins)
@@ -166,7 +177,10 @@ library(tidyverse)
 ```
 
 
-Let's now load a csv file. Attaching in your workspace is a file named "orbdata2013.csv". This file contains spider data collected by Lewis & Clark students in 2013. We can load this into our R environment by using the read_csv function:
+Let's now load a csv file. Attaching in your workspace is a file named "orbdata2013.csv". This file contains spider data collected by Lewis & Clark students in 2013. You can also load csv files into your "Files" section in the lower-right area. Simply click the "Upload" button, and select a file from your computer.
+
+
+We can load this into our R environment by using the read_csv function:
 
 ```{r}
 orbData13<-read_csv("orbdata2013.csv")
@@ -187,7 +201,7 @@ Let's say were interested in the average orb height from the data. You can creat
 ```{r}
 
 # notice the column name is contained in quotes. 
-heights<-orbData13$'Orb height (cm)'
+heights<-orbData13$`Orb height (cm)`
 
 #print heights
 heights
@@ -204,7 +218,6 @@ avgHeight<-mean(heights)
 
 avgHeight
 
-length(heights)
 
 ```
 
@@ -212,7 +225,7 @@ length(heights)
 
 ```{r}
 
-cleanedHeights<-na.omit(heights)
+cleanedHeights<-na.omit(heights, na.action="omit")
 
 cleanedHeights
 
@@ -241,34 +254,103 @@ Now it's your turn. Can you find the mean and standard deviation of the "orb wid
 ```
 
 
-
-
-
-
-The filter function takes a couple arguements: the data itself, and also the rules you want to filter. For example, say I only am interested in the data for which the Name is Mary. In the chunk below, I'm going to make it so:
+In the data set, one of the columns indicates whether the web is damaged. Let's say we're interested in seeing if there's a difference in the average weights of spiders for damaged vs. undamaged webs. We can do this in R by using the "filter" function. This lets us create subsets of our tibble, after which we can use the strategies we just learned for determining averages.
 
 ```{r}
 
+#The filter function takes two arguments: the first is the data set (or tibble), the second is your filtering condition.
+#For damaged, we only want the rows in which the column value is "Y". We use the "==" because we're comparing two things. 
 
-wts<-orbData$'spider mass (g)'
-wts
+damaged<-filter(orbData13, orbData13$`web damaged? (Y or N)`=="Y")
 
-betterWts<-as.numeric(wts)
-#betterWts
+#print damaged
+damaged
 
-evenBetterWts<-na.omit(betterWts)
-#evenBetterWts
+undamaged<-filter(orbData13, orbData13$`web damaged? (Y or N)`=="N")
 
-#sd(evenBetterWts)
-
-
-#wts2<-filter(orbData, )
-
+undamaged
 
 
 ```
 
 
+Now that we have our subsets, we can create arrays for each, and then determine the averages. Since it's likely we'll need to clean up our data as before, to delete the NA values, we can use the na.omit function directly when targeting our data column. Fancy!
+
+```{r}
+
+damagedMass<-na.omit(damaged$`spider mass (g)`)
+
+undamagedMass<-na.omit(undamaged$`spider mass (g)`)
+
+
+
+damagedMass
+
+undamagedMass
+
+```
+
+
+Now we can find the averages...except there's one issue. Notice that all the values listed for damagedMass and undamagedMass are shown in quotation marks. This means that R thinks these values are strings instead of numbers. This is a super important aspect of dealing with data - Data Type. If you want to perform calclulations on data, the data has to be understood to R as numeric (even if it's obvious to us, just by looking at it). 
+
+```{r}
+
+#Here we can redefine damagedMass and undamagedMass, using the as.numeric function. This converts strings to numbers.
+damagedMass<-as.numeric(damagedMass)
+
+undamagedMass<-as.numeric(undamagedMass)
+
+
+#Use the mean function on both
+avgDamagedMass<-mean(damagedMass)
+
+avgUndamagedMass<-mean(undamagedMass)
+
+#print them out
+avgDamagedMass
+
+avgUndamagedMass
+
+```
+
+
+Now it's your turn. Let's say you're interested in comparing the average masses of spiders that have an orb height of 35cm or greater, vs those with an orb hieght of less than 35cm. Write some code in the code chunk below to make your determination.
+
+```{r}
+
+#Use the filter function to create your data subsets
+
+
+
+#Create variables for the mass column from each subset. Do you need to clean your data?
+
+
+
+#Determine the averages
+
+
+```
+
+
+
+
+For the weekend:
+
+Load the class dataset into the Files area (click "Upload", and select the csv file from your computer). Think of a research question or comparison that you're interested in. Use the code chunks below to perform your work:
+
+```{r}
+
+
+
+
+
+
+
+
+
+
+
+```
 
 
 
